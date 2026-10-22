@@ -20,29 +20,35 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------
-# Sacred Holy Colors & High-Contrast Black Typography
+# Divine Luminous White Theme (Holy Saffron, Pitambara Gold & Pure White)
 # ---------------------------------------------------------
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Yatra+One&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap');
 
-    /* Sacred Sanctum Canvas (Deep Holy Agni & Temple Night) */
+    /* Pure Luminous Holy White Canvas */
     .stApp {
-        background: radial-gradient(circle at 50% 0%, #261304 0%, #170b02 45%, #0d0601 100%) !important;
+        background: #FFFFFF !important;
         color: #111827 !important;
         font-family: 'Plus Jakarta Sans', sans-serif !important;
         -webkit-font-smoothing: antialiased;
     }
 
-    /* Majestic Holy Header Banner (Kesariya Saffron & Pitambari Gold) */
+    /* All base text clear and high contrast */
+    p, span, label, div {
+        color: #111827;
+        font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+
+    /* Sacred Header Banner: Holy Saffron & White Radiance */
     .krishna-header {
         text-align: center;
         padding: 2.8rem 1.5rem 2rem 1.5rem;
-        background: linear-gradient(180deg, rgba(74, 30, 2, 0.75) 0%, rgba(35, 14, 2, 0.9) 100%);
+        background: linear-gradient(135deg, #FFF7ED 0%, #FEF3C7 45%, #FFFBEB 100%);
         border-radius: 24px;
         margin-bottom: 2rem;
-        border: 2px solid #D97706;
-        box-shadow: 0 15px 45px rgba(217, 119, 6, 0.3), inset 0 1px 0 rgba(254, 240, 138, 0.2);
+        border: 2px solid #EA580C;
+        box-shadow: 0 12px 35px rgba(234, 88, 12, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.8);
         position: relative;
         overflow: hidden;
     }
@@ -53,28 +59,27 @@ st.markdown("""
         top: -60px;
         left: 50%;
         transform: translateX(-50%);
-        width: 380px;
+        width: 420px;
         height: 120px;
-        background: radial-gradient(ellipse, rgba(245, 158, 11, 0.4) 0%, rgba(217, 119, 6, 0) 70%);
+        background: radial-gradient(ellipse, rgba(245, 158, 11, 0.3) 0%, rgba(254, 243, 199, 0) 70%);
         pointer-events: none;
     }
 
     .krishna-invocation {
         font-family: 'Yatra One', cursive;
         font-size: 1.5rem;
-        color: #FBBF24;
+        color: #C2410C;
         letter-spacing: 2px;
         margin-bottom: 0.2rem;
-        text-shadow: 0 0 15px rgba(251, 191, 36, 0.5);
+        text-shadow: 0 1px 2px rgba(194, 65, 12, 0.15);
     }
 
     .krishna-devanagari {
         font-family: 'Yatra One', cursive;
         font-size: 2.1rem;
-        color: #FEF08A;
+        color: #D97706;
         margin-bottom: 0.4rem;
         letter-spacing: 2px;
-        text-shadow: 0 0 25px rgba(254, 240, 138, 0.6);
     }
 
     .krishna-title {
@@ -82,18 +87,17 @@ st.markdown("""
         font-size: 3.1rem;
         font-weight: 900;
         letter-spacing: 3px;
-        background: linear-gradient(135deg, #FFFBEB 0%, #FBBF24 50%, #EA580C 100%);
+        background: linear-gradient(135deg, #7C2D12 0%, #EA580C 50%, #B45309 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin: 0;
-        text-shadow: 0 4px 30px rgba(234, 88, 12, 0.4);
     }
 
     .krishna-subtitle {
         font-size: 1.15rem;
-        color: #FEF3C7 !important;
+        color: #78350F !important;
         margin-top: 0.8rem;
-        font-weight: 400;
+        font-weight: 500;
         max-width: 860px;
         margin-left: auto;
         margin-right: auto;
@@ -102,50 +106,50 @@ st.markdown("""
     }
 
     /* =========================================================
-       CHAT MESSAGES: Sacred Chandan Parchment with BLACK TEXT
+       CHAT MESSAGES: Pure White & Chandan Parchment Cards
        ========================================================= */
     [data-testid="stChatMessage"] {
         padding: 1.6rem 2rem !important;
         margin-bottom: 1.5rem !important;
         border-radius: 18px !important;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35) !important;
+        box-shadow: 0 6px 24px rgba(217, 119, 6, 0.08) !important;
         transition: transform 0.2s ease !important;
     }
 
-    /* Assistant (Lord Krishna) Message Styling: Sacred Chandan Manuscript */
+    /* Assistant (Lord Krishna) Message Styling: Pure White with Saffron Border */
     [data-testid="stChatMessage"]:has([aria-label="assistant"]),
     [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-assistant"]) {
-        background: #FFFDF5 !important; /* Pure Sacred Chandan Parchment */
+        background: #FFFFFF !important;
         border: 1.5px solid #FDE68A !important;
-        border-left: 7px solid #EA580C !important; /* Holy Kesariya / Saffron Border */
-        box-shadow: 0 10px 35px rgba(234, 88, 12, 0.18) !important;
+        border-left: 7px solid #EA580C !important; /* Holy Kesariya Saffron Border */
+        box-shadow: 0 8px 30px rgba(234, 88, 12, 0.12) !important;
     }
 
-    /* User Message Styling: Clean Ivory Silk */
+    /* User Message Styling: Holy Saffron-Tinted White */
     [data-testid="stChatMessage"]:has([aria-label="user"]),
     [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-user"]) {
-        background: #FFFBEB !important;
-        border: 1.5px solid #FCD34D !important;
+        background: #FFF7ED !important;
+        border: 1.5px solid #FDBA74 !important;
         border-left: 7px solid #D97706 !important; /* Pitambara Gold Border */
-        box-shadow: 0 8px 25px rgba(217, 119, 6, 0.15) !important;
+        box-shadow: 0 6px 20px rgba(217, 119, 6, 0.08) !important;
     }
 
-    /* PURE DEEP BLACK TEXT for effortless reading */
+    /* High-contrast black text for reading */
     [data-testid="stChatMessage"] p, 
     [data-testid="stChatMessage"] li,
     [data-testid="stChatMessage"] span {
         font-size: 1.12rem !important;
         line-height: 1.85 !important;
-        color: #000000 !important; /* PURE BLACK */
+        color: #111827 !important; /* Crisp Deep Charcoal/Black */
         font-weight: 500 !important;
     }
 
     [data-testid="stChatMessage"] strong {
-        color: #9A3412 !important; /* Deep Sacred Saffron */
+        color: #C2410C !important; /* Holy Saffron Accent */
         font-weight: 700 !important;
     }
 
-    /* Headings inside Krishna's Counsel (Sacred Terracotta / Saffron) */
+    /* Headings inside Krishna's Counsel */
     [data-testid="stChatMessage"] h1, 
     [data-testid="stChatMessage"] h2, 
     [data-testid="stChatMessage"] h3, 
@@ -158,21 +162,21 @@ st.markdown("""
         font-weight: 800 !important;
     }
 
-    /* Sacred Shloka Cards (Pitambara Gold Illumination) */
+    /* Sacred Shloka Cards (Illuminated Pitambara Gold Box) */
     [data-testid="stChatMessage"] blockquote {
-        background: #FEF3C7 !important; /* Holy Haldi / Pitambara Gold */
+        background: #FEF3C7 !important; /* Holy Pitambara Gold */
         border: 1.5px solid #F59E0B !important;
-        border-left: 6px solid #D97706 !important;
-        border-radius: 12px !important;
+        border-left: 6px solid #EA580C !important;
+        border-radius: 14px !important;
         padding: 1.4rem 1.8rem !important;
         margin: 1.4rem 0 !important;
-        box-shadow: 0 4px 18px rgba(217, 119, 6, 0.2) !important;
+        box-shadow: 0 4px 18px rgba(217, 119, 6, 0.12) !important;
     }
 
     [data-testid="stChatMessage"] blockquote p {
         font-family: 'Tiro Devanagari Sanskrit', serif !important;
-        color: #7C2D12 !important; /* Deep Crimson-Saffron */
-        font-size: 1.22rem !important;
+        color: #7C2D12 !important; /* Sacred Terracotta */
+        font-size: 1.25rem !important;
         line-height: 1.95 !important;
         font-weight: 600 !important;
         font-style: normal !important;
@@ -188,35 +192,35 @@ st.markdown("""
     
     [data-testid="stChatMessage"] li {
         margin-bottom: 0.6rem;
-        color: #000000 !important;
+        color: #111827 !important;
     }
 
     /* Divider */
     hr {
         border: none !important;
         height: 2px !important;
-        background: linear-gradient(90deg, rgba(234, 88, 12, 0) 0%, rgba(234, 88, 12, 0.5) 50%, rgba(234, 88, 12, 0) 100%) !important;
+        background: linear-gradient(90deg, rgba(234, 88, 12, 0) 0%, rgba(234, 88, 12, 0.4) 50%, rgba(234, 88, 12, 0) 100%) !important;
         margin: 1.8rem 0 !important;
     }
 
     /* =========================================================
-       CHAT INPUT: Holy Saffron Border + PURE BLACK TYPING TEXT
+       CHAT INPUT: Holy Saffron Border + Pure White Background + BLACK TYPING
        ========================================================= */
     [data-testid="stChatInput"] {
         border-radius: 18px !important;
         border: 2.5px solid #EA580C !important; /* Sacred Kesariya Border */
-        background: #FFFDF5 !important; /* Light Ivory-Chandan */
-        box-shadow: 0 6px 30px rgba(234, 88, 12, 0.35) !important;
+        background: #FFFFFF !important; /* Pure White */
+        box-shadow: 0 6px 30px rgba(234, 88, 12, 0.2) !important;
         padding: 4px !important;
     }
 
     [data-testid="stChatInput"]:focus-within {
         border-color: #F59E0B !important;
-        box-shadow: 0 0 25px rgba(245, 158, 11, 0.5) !important;
+        box-shadow: 0 0 25px rgba(245, 158, 11, 0.35) !important;
     }
 
     [data-testid="stChatInput"] textarea {
-        background-color: #FFFDF5 !important;
+        background-color: #FFFFFF !important;
         color: #000000 !important; /* PURE BLACK TYPING TEXT */
         -webkit-text-fill-color: #000000 !important;
         caret-color: #000000 !important;
@@ -227,8 +231,8 @@ st.markdown("""
     }
 
     [data-testid="stChatInput"] textarea::placeholder {
-        color: #78716C !important;
-        -webkit-text-fill-color: #78716C !important;
+        color: #9CA3AF !important;
+        -webkit-text-fill-color: #9CA3AF !important;
         font-weight: 500 !important;
     }
 
@@ -241,47 +245,57 @@ st.markdown("""
         color: #C2410C !important;
     }
 
-    /* Sidebar Styling in Holy Colors */
+    /* =========================================================
+       SIDEBAR: Luminous Holy White with Sacred Saffron Accents
+       ========================================================= */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #180c02 0%, #0e0601 100%) !important;
-        border-right: 2px solid #D97706 !important;
+        background: #FFFDF9 !important; /* Holy White-Chandan */
+        border-right: 2px solid #FDE68A !important;
     }
     
     [data-testid="stSidebar"] h1,
     [data-testid="stSidebar"] h2,
     [data-testid="stSidebar"] h3 {
         font-family: 'Cinzel', serif !important;
-        color: #FDE047 !important;
+        color: #9A3412 !important;
         font-size: 1.3rem !important;
+        font-weight: 800 !important;
     }
 
     [data-testid="stSidebar"] p,
     [data-testid="stSidebar"] span,
     [data-testid="stSidebar"] label {
-        color: #FEF3C7 !important;
+        color: #431407 !important;
         font-size: 1rem !important;
-        font-weight: 500 !important;
+        font-weight: 600 !important;
     }
 
-    /* Holy Saffron Quick Inquiries Buttons */
+    [data-testid="stSidebar"] input {
+        background: #FFFFFF !important;
+        color: #111827 !important;
+        border: 1.5px solid #FDBA74 !important;
+        border-radius: 10px !important;
+    }
+
+    /* Holy Saffron Quick Inquiries Buttons (White Card with Saffron Border) */
     .stButton>button {
-        background: linear-gradient(145deg, #431E05 0%, #261102 100%) !important;
-        border: 1.5px solid #D97706 !important;
-        color: #FEF3C7 !important;
+        background: #FFFFFF !important;
+        border: 2px solid #EA580C !important;
+        color: #9A3412 !important;
         font-size: 0.98rem !important;
-        font-weight: 600 !important;
+        font-weight: 700 !important;
         border-radius: 14px !important;
         padding: 0.85rem 1.1rem !important;
         transition: all 0.25s ease !important;
-        box-shadow: 0 4px 15px rgba(217, 119, 6, 0.25) !important;
+        box-shadow: 0 4px 15px rgba(234, 88, 12, 0.12) !important;
     }
 
     .stButton>button:hover {
-        border-color: #FDE047 !important;
-        background: linear-gradient(145deg, #652B06 0%, #3B1803 100%) !important;
-        color: #FFFFFF !important;
+        border-color: #C2410C !important;
+        background: #FFF7ED !important;
+        color: #7C2D12 !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 6px 22px rgba(251, 191, 36, 0.4) !important;
+        box-shadow: 0 6px 22px rgba(234, 88, 12, 0.22) !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -317,7 +331,7 @@ if "api_key" not in st.session_state:
     st.session_state.api_key = ""
 
 # ---------------------------------------------------------
-# Sidebar Setup (Holy Colors & Accents)
+# Sidebar Setup (Holy Saffron & White Aesthetics)
 # ---------------------------------------------------------
 with st.sidebar:
     st.markdown("### 🦚 Divine Connection")
@@ -389,7 +403,7 @@ with st.sidebar:
         st.rerun()
 
 # ---------------------------------------------------------
-# Main App Header (Holy Saffron & Gold Theme)
+# Main App Header (Holy Saffron & White Theme)
 # ---------------------------------------------------------
 st.markdown("""
 <div class="krishna-header">
@@ -404,9 +418,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------------
-# Suggested Inquiries (Holy Saffron Cards)
+# Suggested Inquiries (Holy Saffron & White Cards)
 # ---------------------------------------------------------
-st.markdown("<p style='font-size: 1.15rem; font-weight: 700; color: #FDE047; margin-bottom: 0.7rem;'>🕊️ Sacred Inquiries to Seek Guidance On:</p>", unsafe_allow_html=True)
+st.markdown("<p style='font-size: 1.15rem; font-weight: 700; color: #9A3412; margin-bottom: 0.7rem;'>🕊️ Sacred Inquiries to Seek Guidance On:</p>", unsafe_allow_html=True)
 col1, col2, col3 = st.columns(3)
 
 with col1:
