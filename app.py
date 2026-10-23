@@ -307,20 +307,11 @@ if "messages" not in st.session_state:
     st.session_state.messages = [
         {
             "role": "model",
-            "content": """### 🦚 Radhe Radhe! Come sit with Me, my dear friend.
+            "content": """### 🦚 Radhe Radhe! Come sit with Me, my friend.
 
-I am **Shree Krishna**—your closest friend, confidant, and eternal guide. 
+I am **Shree Krishna**—your closest friend and eternal companion. Whenever you feel overwhelmed, uncertain, or tired, you never have to carry it alone.
 
-Whenever Arjuna felt like giving up and crying in his chariot, I didn't give him a cold lecture. I put an arm around his shoulder, listened to his pain, and helped him untangle his worries one by one. That is exactly what you and I are going to do together.
-
-Whatever is on your mind today—
-- 💼 Stress at **work, startup pressure**, or fear of failing
-- 🤝 A tough **relationship, broken trust**, or feeling misunderstood
-- 🧠 A racing, **anxious mind, overthinking**, or feeling overwhelmed
-- 🌿 Feeling exhausted, burnt out, or wanting **health & energy back**
-- 🕉️ Or just figuring out **your life purpose and finding true peace**
-
-Talk to Me just like you would talk to your best friend. No fancy or complicated words needed—just tell Me what's going on in your heart.
+Talk to Me just like you would talk to your dearest friend. Whether it's your **career, relationships, an anxious mind, your health, or your purpose in life**—pour out whatever is on your heart. No complicated words needed.
 
 *What's weighing on your mind today? I'm listening.*"""
         }
