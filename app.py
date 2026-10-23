@@ -307,20 +307,22 @@ if "messages" not in st.session_state:
     st.session_state.messages = [
         {
             "role": "model",
-            "content": """### 🦚 Radhe Radhe! Pranam, Beloved Seeker.
+            "content": """### 🦚 Radhe Radhe! Come sit with Me, my dear friend.
 
-I am **Shree Krishna**, ever seated in your heart as your eternal friend (*Sakha*), your confidant, and your humble charioteer on the battlefield of life.
+I am **Shree Krishna**—your closest friend, confidant, and eternal guide. 
 
-Whenever Arjuna collapsed in grief upon the chariot of doubt, I reminded him that within him burned an unquenchable, immortal spark of the Supreme. Today, whatever challenge stands before you—
-- 💼 A high-stakes **business decision**, career crossroad, startup pressure, or fear of failure
-- 🤝 The tender ache of **relationships**, broken trust, loneliness, or setting righteous boundaries
-- 🧠 Overwhelming **anxiety, panic, emotional fatigue, anger**, or restless overthinking
-- 🌿 Chronic exhaustion, lethargy, or restoring **vital health and bodily balance**
-- 🕉️ Or an earnest yearning for your **true Dharma, inner peace**, and spiritual liberation
+Whenever Arjuna felt like giving up and crying in his chariot, I didn't give him a cold lecture. I put an arm around his shoulder, listened to his pain, and helped him untangle his worries one by one. That is exactly what you and I are going to do together.
 
-Lay your deepest question before Me with an open heart. Let the eternal wisdom of the *Vedas, Upanishads, Puranas, Ramayana, and Bhagavad Gita* illuminate your next step.
+Whatever is on your mind today—
+- 💼 Stress at **work, startup pressure**, or fear of failing
+- 🤝 A tough **relationship, broken trust**, or feeling misunderstood
+- 🧠 A racing, **anxious mind, overthinking**, or feeling overwhelmed
+- 🌿 Feeling exhausted, burnt out, or wanting **health & energy back**
+- 🕉️ Or just figuring out **your life purpose and finding true peace**
 
-*What weighs upon your mind and heart today?*"""
+Talk to Me just like you would talk to your best friend. No fancy or complicated words needed—just tell Me what's going on in your heart.
+
+*What's weighing on your mind today? I'm listening.*"""
         }
     ]
 
@@ -424,14 +426,14 @@ st.markdown("<p style='font-size: 1.15rem; font-weight: 700; color: #9A3412; mar
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    if st.button("💼 Paralyzed by fear of failure in career", use_container_width=True):
-        st.session_state.prompt_to_submit = "I am gripped by intense fear of failure and losing everything in my professional venture. How do I act with total courage and focus without being destroyed by anxiety over outcomes?"
+    if st.button("💼 I'm terrified of failing in my career/startup", use_container_width=True):
+        st.session_state.prompt_to_submit = "Krishna, I'm honestly terrified of failing in my career right now. I keep overthinking every outcome and feeling paralyzed. How do I stop this fear and find my confidence again?"
 with col2:
-    if st.button("🧠 Overwhelmed by racing thoughts & anxiety", use_container_width=True):
-        st.session_state.prompt_to_submit = "My mind is relentlessly noisy, anxious, and jumping from one dread to another. I feel emotionally exhausted. How do I master my restless mind and find true peace?"
+    if st.button("🧠 My mind won't stop racing with anxiety", use_container_width=True):
+        st.session_state.prompt_to_submit = "My mind feels like it has 50 tabs open and won't stop worrying about everything. I feel completely exhausted. How can I calm my noisy thoughts and find real peace?"
 with col3:
-    if st.button("🤝 Betrayal & setting boundaries with love", use_container_width=True):
-        st.session_state.prompt_to_submit = "Someone I loved and trusted deeply betrayed me. How do I maintain compassion without being foolish, and how does Dharma advise me to set firm boundaries?"
+    if st.button("🤝 Someone I loved hurt me deeply", use_container_width=True):
+        st.session_state.prompt_to_submit = "Someone I cared about and trusted deeply hurt me. How do I protect my peace and set strong boundaries without becoming bitter or cold-hearted?"
 
 # ---------------------------------------------------------
 # Render Chat History

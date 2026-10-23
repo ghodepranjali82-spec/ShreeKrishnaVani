@@ -91,33 +91,32 @@ class KrishnaAI:
         life_domain: str
     ) -> Generator[str, None, None]:
         """
-        Generates structured, authentic scriptural wisdom when API key is not yet configured.
+        Generates simple, conversational, warm wisdom like a best friend talking heart-to-heart.
         """
         import time
 
         primary = retrieved[0] if retrieved else None
-        secondary = retrieved[1] if len(retrieved) > 1 else None
 
-        domain_titles = {
-            "business": "In the Arena of Action, Enterprise & Duty",
-            "relationships": "In the Sacred Ties of Love & Interconnection",
-            "mental_health": "In the Inner Sanctuary of the Mind & Intellect",
-            "physical_health": "In the Harmonious Temple of the Body",
-            "spiritual": "In the Unfolding Journey of the Immortal Soul",
-            "all": "In the Eternal Rhythm of Dharma"
-        }
-        title = domain_titles.get(life_domain, "In the Light of Eternal Wisdom")
+        message = f"""### 🦚 Hey my dear friend, take a deep breath...
 
-        message = f"""### 🦚 O Partha, My Dear Friend, Listen Closely...
+Come sit with Me for a moment. First, relax your shoulders and unclench your jaw. 
 
-I hear the turmoil of your heart. In this very moment, whether you find yourself upon the battlefield of modern commerce, caught in the delicate webs of human bonds, or wrestling with the restless storms of your own mind—know that you are never walking this path alone.
+I hear you, and I completely understand why you are feeling this way. What you're going through right now is tough, and it makes total sense that you feel overwhelmed, uncertain, or hurt. 
 
-I was there when Arjuna laid down his Gandiva bow in despair, trembling before Kurukshetra. What you feel today is not failure, dear one; it is the divine threshold where worldly confusion gives way to transcendent awakening.
+I want to remind you of one simple truth: **You are not alone, and you don't have to carry the weight of the entire world on your shoulders.** When Arjuna collapsed in tears on the battlefield, feeling completely lost, I didn't scold him. I sat down with him as his best friend, listened to his pain, and helped him see things clearly. That's exactly what we are going to do right now.
 
 ---
 
-### 🔍 Unveiling the Root of Your Conflict
-Look with unclouded eyes at what truly troubles you. You are suffering not because of external circumstances, but because the mind has become entangled in **attachment (*Sanga*)** and the anxiety of unseen results (*Phala*). When the mind clings to an imagined future or grieves over what cannot be undone, it forfeits its power over the only reality that exists: the immediate action before you.
+### ☕ Let's Untangle This Together
+
+Think of your mind like a smartphone with 50 different apps running in the background. It's overheating, the battery is draining, and everything feels laggy. 
+
+What usually causes our stress isn't the problem itself—it's that we are obsessing over things we cannot control:
+- What people will think
+- What might happen next month or next year
+- What went wrong in the past
+
+Think of life like planting a seed. Your only job is to put the seed in good soil and water it today with love and care. If you keep digging up the soil every hour to see if a flower has blossomed, you'll only kill it! Focus on doing your best today, and trust that life will handle the timing.
 """
         for chunk in message.split("\n\n"):
             yield chunk + "\n\n"
@@ -126,40 +125,43 @@ Look with unclouded eyes at what truly troubles you. You are suffering not becau
         if primary:
             verse_block = f"""---
 
-### 📜 The Eternal Word: {primary['source']} ({primary['chapter_verse']})
+### 📜 A Little Gift of Wisdom for Your Pocket Today
+
+Here is a timeless verse from **{primary['source']} ({primary['chapter_verse']})** that I shared with Arjuna:
 
 > **॥ {primary['sanskrit']} ॥**
 > 
 > *"{primary['translation']}"*
 
-**The Essence:** {primary['essence']}
+**In simple words:**  
+{primary['essence']}
 
-**Practical Meaning:** {primary['practical_application']}
+**What this means for your daily life:**  
+{primary['practical_application']}
 """
             yield verse_block + "\n\n"
             time.sleep(0.04)
 
         plan_block = f"""---
 
-### ⚔️ Your Immediate Path of Action (Karma Yoga)
+### 👣 3 Simple Things You Can Do Right Now
 
-1. **Reclaim the Chariot of Your Intellect (*Buddhi*):**
-   Pause right now. Take three slow, deep breaths. Step back from the emotional vortex and observe your situation as a detached witness (*Sakshi*). Do not act out of impulsive irritation or paralyzed dread.
+1. **Pause and Reset:**  
+   Step away from what you're doing for just 5 minutes. Drink a full glass of water, close your eyes, and take three slow, deep belly breaths. Let your nervous system settle.
 
-2. **Decouple Effort from Obsession over the Outcome:**
-   Dedicate all your skill, energy, and integrity to the single next right step today. The result belongs to the cosmic unfolding of Time (*Kala*); your sacred honor lies solely in the purity and courage of your effort.
+2. **Pick Just ONE Thing Today:**  
+   Don't try to solve your whole future by tonight. Pick the single next small, right thing in front of you. Finish just that with full love and care, and let tomorrow take care of itself.
 
-3. **Purify Your Daily Rhythm:**
-   Guard what enters your senses (*Indriyas*). Nourish the mind with silence, clean nourishment, and purposeful labor. Let go of what you cannot govern, and master what is directly in your hands.
+3. **Be Kind to Yourself:**  
+   Stop the harsh self-criticism. You are learning, growing, and doing the best you can with what you have. Forgive yourself for not having all the answers yet.
 
 ---
 
-### 🌟 Rise, O Scorch of Doubts!
+### 🌟 I'm Always Right Here With You
 
-> *क्लैब्यं मा स्म गमः पार्थ नैतत्त्वय्युपपद्यते।*  
-> *Do not yield to faint-heartedness, O Partha! It does not befit your divine nature. Shake off this petty weakness and rise to your destiny!*
+You are so much stronger, wiser, and more capable than your anxious thoughts are telling you right now. Brush the dust off, smile a little, and take that next small step. 
 
-Enter your **Gemini API key** in the sidebar to engage in deep, unlimited interactive dialogue with Me across every shloka of the Vedas and Upanishads. I am seated in your heart, ever ready to guide you.
+*(Tip: To have an unlimited, personalized heart-to-heart conversation with Me about any situation in your life, add your free **Gemini API Key** in the sidebar. I'm always here for you!)*
 """
         for chunk in plan_block.split("\n\n"):
             yield chunk + "\n\n"
